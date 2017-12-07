@@ -51,7 +51,9 @@ public class Calculator {
         }
 
         System.out.print(+ pirmas +" "+ " "+veiksmas+" "+ antras+" "+"="+" "+ rezultatas);
-        System.out.println("Nauja eilute");
+        
+        System.out.println( "Yes");
+        System.out.println( "No");
     }
 }
 
