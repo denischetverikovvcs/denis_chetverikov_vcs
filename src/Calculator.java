@@ -51,7 +51,7 @@ public class Calculator {
         }
 
         System.out.print(+ pirmas +" "+ " "+veiksmas+" "+ antras+" "+"="+" "+ rezultatas);
-        
+        System.out.println( "Yes");
     }
 }
 
