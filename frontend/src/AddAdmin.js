@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {FormControl} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 class AddAdmin extends Component {
   constructor(props) {
@@ -50,21 +52,21 @@ class AddAdmin extends Component {
         return (
           <div className='addAdmin'>
             <form>
-              <label>Vardas</label><br />
-              <input name="fname" type="text" onChange={this.handleChangeFor("fname")} value={this.state.fname}/><br />
-              <label>Pavardė</label><br />
-              <input name="lname" type="text"  onChange={this.handleChangeFor("lname")} value={this.state.lname} /><br />
-              <label>Elektronis paštas</label><br />
-              <input name="email" type="text"  onChange={this.handleChangeFor("email")} value={this.state.email} /><br />
-              <label>Telefono numeris</label><br />
-              <input name="phone" type="text"  onChange={this.handleChangeFor("phone")} value={this.state.phone}/><br />
-              <label>Vartotojo vardas</label><br />
-              <input name="username" type="text"  onChange={this.handleChangeFor("username")} value={this.state.username} /><br />
-              <label>Laikinas slaptažodis</label><br />
-              <input name="password" type="password" onChange={this.handleChangeFor("password")} value={this.state.password} /><br />
-              <label>Pakartokite slaptažodį</label><br />
-              <input name="passwordConfirm" type="password"  onChange={this.handleChangeFor("passwordConfirm")} value={this.state.passwordConfirm} /><br />
-              <button onClick={this.addAdmin}>Išsaugoti</button>
+              <label>Vardas</label>
+              <FormControl placeholder="Įveskite vardą" name="fname" type="text"  onChange={this.handleChangeFor("fname")} value={this.state.fname}/>
+              <label>Pavardė</label>
+              <FormControl placeholder="Įveskite pavardę" name="lname" type="text"  onChange={this.handleChangeFor("lname")} value={this.state.lname} />
+              <label>Elektronis paštas</label>
+              <FormControl placeholder="Įveskite elektroninį paštą" name="email" type="text"  onChange={this.handleChangeFor("email")} value={this.state.email} />
+              <label>Telefono numeris</label>
+              <FormControl placeholder="860000000" name="phone" type="text"  onChange={this.handleChangeFor("phone")} value={this.state.phone}/>
+              <label>Vartotojo vardas</label>
+              <FormControl placeholder="Įveskite vartotojo vardą" name="username" type="text"  onChange={this.handleChangeFor("username")} value={this.state.username} />
+              <label>Slaptažodis</label>
+              <FormControl placeholder="Įveskite slaptažodį" name="password" type="password" onChange={this.handleChangeFor("password")} value={this.state.password} />
+              <label>Pakartokite slaptažodį</label>
+              <FormControl placeholder="Pakartokite slaptažodį" name="passwordConfirm" type="password"  onChange={this.handleChangeFor("passwordConfirm")} value={this.state.passwordConfirm} /><br/>
+              <Button type="submit" onClick={this.addAdmin}>Išsaugoti</Button>
             </form>
           </div>
         );

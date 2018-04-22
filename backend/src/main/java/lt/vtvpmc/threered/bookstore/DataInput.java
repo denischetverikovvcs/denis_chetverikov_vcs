@@ -36,9 +36,9 @@ public class DataInput implements CommandLineRunner {
 		Author oliver = new Author("Jamie", "Oliver");
 		Set<Author> authors = new HashSet<Author>();
 		authors.add(oliver);
-		Author oliver2 = new Author("Jamie", "Oliver");
+		Author beata = new Author("Beata", "Nicholson");
 		Set<Author> authors2 = new HashSet<Author>();
-		authors2.add(oliver2);
+		authors2.add(beata);
 
 		Category cuisine = new Category("cuisine");
 		Category drama = new Category("drama");
@@ -55,8 +55,8 @@ public class DataInput implements CommandLineRunner {
 		Book cooking = new Book(categories, "https://book", "Cooking", authors, "2016", "9781401301958",
 				new BigDecimal("20"), "Cooking book", 4, true);
 		bookService.addBook(cooking);
-		Book cooking2 = new Book(categories2, "https://book", "Cooking", authors, "2016", "9781250146250",
-				new BigDecimal("20"), "Cooking book", 4, true);
+		Book cooking2 = new Book(categories2, "https://book", "Taste Lithuania", authors2, "2008", "9781250146250",
+				new BigDecimal("13"), "Cooking book", 4, true);
 		bookService.addBook(cooking2);
 		
 

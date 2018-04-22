@@ -32,7 +32,7 @@ public abstract class User {
 	@Length(max = 40)
 	private String username;
 	@NotNull
-	//@Length(min = 8, max = 30)
+	@Length(min = 8)
 	private String password;
     //@NotNull
 	@Transient
@@ -40,7 +40,7 @@ public abstract class User {
 	@ManyToOne
 	private Role role;
 	@NotNull
-	//@Length(min = 2, max = 30)
+	@Length(min = 2)
 	private String firstName;
 	@NotNull
 	@Length(min = 2, max = 40)
@@ -48,7 +48,6 @@ public abstract class User {
 	@NotNull
 	//@Pattern(regexp = "^\\+?(\\d+)")
 	private String phoneNo;
-	
     //@NotNull
     private String email;
    

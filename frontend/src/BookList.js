@@ -20,12 +20,10 @@ class BookList extends Component {
             return <Book key = {book.id} book = {book}/>
         })
 
-        return(<div>
-                 <h1> Visos knygos </h1>
+        return(
             <div className="listOfBooks">
                 {bookList}
-            </div> 
-        </div>)
+        </div>) 
     }
 }
 export default BookList;

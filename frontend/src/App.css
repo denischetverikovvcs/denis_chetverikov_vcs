@@ -9,26 +9,29 @@ html {
 }
 
 body {
-  margin: 0 auto;
+ margin: 0 auto;
+ height: 100vh; 
+ width: 100vw; 
+}
+
+.main{
+  height: 85vh;
+  overflow:auto;
 }
 
 /* side menu */
 
 .Navbar{
     background-color: #202538;
-    font-size: 0.85em;
-    height: 80vh;
+    height: 85vh;
     width:15%;
-    float: left;
-    
+    float: left; 
 }
 
 .navmenu ul {
-  
   list-style-type: none;
   padding: 0;
-  margin: 0;
-      
+  margin: 0;  
 }
   
 .navmenu ul li a {
@@ -42,7 +45,6 @@ body {
 .navmenu ul li a:hover {
   background-color: #16a4fa;
   color: #ffffff;
-  
 }
 
 .menu-icon {
@@ -52,7 +54,7 @@ body {
 /* top menu */
 
 .navbartop{
-  height:10vh; 
+  height:8vh; 
   background-color: #303549;
   font-size: 0.85em;
   position: relative;
@@ -62,6 +64,7 @@ body {
   text-align: center;
   margin: 0;
   color: #7d859c;
+  padding-top: 15px;
 }
 
 .topmenu {
@@ -86,7 +89,6 @@ body {
 }
 
 .topmenu li a {
-
   color: #ffffff;
   display: table-cell;
   vertical-align: middle;
@@ -95,21 +97,38 @@ body {
   text-decoration: none;
 }
 
-
  /* footer */
 
  .footer{
  background: #181e2c;
- height: 10vh;
+ height: 7vh;
  clear: both;
-
  }
- 
-.bookTitle{
-  color: green;
-}
+
+/* books */
 
 .listOfBooks {
+  box-sizing: border-box;
+  display: flex;
+  padding: 20px;
+  text-align: left;
+}
+
+.listOfBooks div{
+  padding-right: 10px;
+}
+
+.listOfBooks p {
+  margin: 0;
+}
+
+img {
+  border-radius: 5px;
+}
+
+/* forms */
+
+.addAdmin, .addSeller, .addBook{
   box-sizing: border-box;
   display: flex;
   padding: 20px;

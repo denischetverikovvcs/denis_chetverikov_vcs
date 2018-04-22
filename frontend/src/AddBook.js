@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {FormControl} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 class AddBook extends Component {
     constructor(props) {
@@ -147,28 +149,26 @@ class AddBook extends Component {
         return (
         <div className='addBook'>
         <form>
-            <label>Title</label><br />
-            <input type="text" name="title" onChange={this.handleChangeFor("title")} value={this.state.title} /><br />
-            <label>Author name</label><br />
-            <input type="text" name="authorname" onChange={this.handleChangeForAuthorName} value={this.state.authors[0].firstName} /><br />
-            <label>Author surname</label><br />
-            <input type="text" name="authorsurname" onChange={this.handleChangeForAuthorSurname} value={this.state.authors[0].lastName} /><br />
-            <label>Year</label><br />
-            <input type="text" name="year" onChange={this.handleChangeFor("year")} value={this.state.year} /><br />
-            <label>ISBN</label><br />
-            <input type="text" name="isbn" onChange={this.handleChangeFor("isbn")} value={this.state.isbn} /><br />
-            <label>Price</label><br />
-            <input type="text" name="price" onChange={this.handleChangeFor("price")} value={this.state.price} /><br />
-            <label>Description</label><br />
-            <input type="text" name="description" onChange={this.handleChangeFor("description")} value={this.state.description} /><br />
-            <label>Number of units</label><br />
-            <input type="text" name="nou" onChange={this.handleChangeFor("nou")} value={this.state.nou} /><br />
-            <label>Category</label><br />
-            <input type="text" name="category" onChange={this.handleChangeForCategory} value={this.state.categories.name} /><br />
+            <label>Pavadinimas</label>
+            <FormControl placeholder="Įveskite knygos pavadinimą" type="text" name="title" onChange={this.handleChangeFor("title")} value={this.state.title} />
+            <label>Autoriaus vardas</label>
+            <FormControl placeholder="Įveskite autoriaus vardą" type="text" name="authorname" onChange={this.handleChangeForAuthorName} value={this.state.authors[0].firstName} />
+            <label>Autoriaus pavardė</label>
+            <FormControl placeholder="Įveskite autoriaus pavardę" type="text" name="authorsurname" onChange={this.handleChangeForAuthorSurname} value={this.state.authors[0].lastName} />
+            <label>Leidimo metai</label>
+            <FormControl placeholder="Įveskite metus, pvz: 2016" type="text" name="year" onChange={this.handleChangeFor("year")} value={this.state.year} />
+            <label>ISBN</label>
+            <FormControl placeholder="Įveskite ISBN numerį" type="text" name="isbn" onChange={this.handleChangeFor("isbn")} value={this.state.isbn} />
+            <label>Kaina</label>
+            <FormControl placeholder="0.00" type="text" name="price" onChange={this.handleChangeFor("price")} value={this.state.price} />
+            <label>Aprašymas</label>
+            <FormControl placeholder="Knygos aprašymas" componentClass="textarea" name="description" onChange={this.handleChangeFor("description")} value={this.state.description} />
+            <label>Vienetų skaičius</label>
+            <FormControl placeholder="0" type="text" name="nou" onChange={this.handleChangeFor("nou")} value={this.state.nou} />
+            <label>Žanras</label>
+            <FormControl placeholder="Įveskite knygos žanrą" type="text" name="category" onChange={this.handleChangeForCategory} value={this.state.categories.name} /> <br/>
+            <Button type="submit" onClick={this.addBook}>Išsaugoti</Button>
         </form>
-            <button onClick={this.addBook}>
-            Submit
-            </button>
         </div>
         );
     }
