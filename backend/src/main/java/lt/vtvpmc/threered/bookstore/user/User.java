@@ -34,7 +34,7 @@ public abstract class User {
 	@NotNull
 	@Length(min = 8)
 	private String password;
-//	@NotNull
+    //@NotNull
 	@Transient
 	private String passwordConfirm;
 	@ManyToOne

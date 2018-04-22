@@ -13,5 +13,5 @@ public interface UserService {
 	//boolean isUserExist(User user);
 
 	void addUser(UserCreate user);
-
+	void updateUser(Long id, UserCreate user);
 }

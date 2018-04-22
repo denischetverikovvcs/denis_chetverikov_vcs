@@ -56,6 +56,17 @@ public class UserController {
 	public List<User> getAllUsers() {
 		return userService.findAllUsers();
 }
+	@RequestMapping(path= "/{id}", method = RequestMethod.DELETE)
+	public void deleteUser(@PathVariable Long id){
+		userService.deleteUserById(id);
+}
+	
+	
+	
+	@RequestMapping(path= "/{id}", method = RequestMethod.PUT)
+	public void updateUser(@PathVariable Long id, @ApiParam @RequestBody UserCreate user){
+		userService.updateUser(id, user);
+}
 
       //  if(users.isEmpty()){
          //   return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
