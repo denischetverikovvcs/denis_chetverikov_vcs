@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import { NavLink } from 'react-router-dom';
-import Navbar from 'react-bootstrap/lib/Navbar';
 
 const AdminMenu = () => (
-  <Navbar inverse collapseOnSelect className="Navbar">
+  <nav className="Navbar">
       <div className="navmenu">
         <ul className="mainmenu">
           <li><NavLink to='/adminmenu/allBooks/'><i className="fa fa-globe menu-icon" aria-hidden="true"></i>Visos knygos</NavLink></li>
@@ -13,7 +12,7 @@ const AdminMenu = () => (
           <li><NavLink to='/adminmenu/addBook/'><i className="fa fa-th-list menu-icon" aria-hidden="true"></i>Pridėti knygą</NavLink></li>
         </ul>
       </div>
-  </Navbar>
+  </nav>
 );
 
 export default AdminMenu;

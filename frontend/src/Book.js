@@ -15,7 +15,7 @@ class Book extends Component {
         });
         return(
             <div>
-                <img src={"http://ma-secretariat.org/wp-content/uploads/2017/12/shopkins-cutie-cars-coloring-pages-black-and-white-collections-10-200x150.png"} 
+                <img src={"https://picsum.photos/200/275/"} 
                 alt="{this.props.book.photoPath}"/>
                 <h3 className="bookTitle">{this.props.book.title}</h3>
                 <div>{authors}</div>
