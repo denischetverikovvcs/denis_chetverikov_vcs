@@ -14,6 +14,7 @@ import lt.vtvpmc.threered.bookstore.category.Category;
 import lt.vtvpmc.threered.bookstore.db.DBService;
 import lt.vtvpmc.threered.bookstore.role.Role;
 import lt.vtvpmc.threered.bookstore.role.RoleRepository;
+//import lt.vtvpmc.threered.bookstore.user.UserService;
 
 @Component
 public class DataInput implements CommandLineRunner {
@@ -21,6 +22,9 @@ public class DataInput implements CommandLineRunner {
 	private DBService bookService;
 	@Autowired
 	private RoleRepository roleRepo;
+	
+//	@Autowired 
+//	private UserService userService;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -33,6 +37,29 @@ public class DataInput implements CommandLineRunner {
 		
 		//End of role set up
 		
+//		UserCreate seller1 = new UserCreate();
+//		seller1.setUserType(UserType.SELLER);
+//		seller1.setUsername("pepe");
+//		seller1.setPassword("abcdefgh");
+//		seller1.setPasswordConfirm("abcdefgh");
+//		seller1.setFirstName("Petras");
+//		seller1.setLastName("Petraitis");
+//		seller1.setPhoneNo("868686866");
+//		seller1.setEmail("pepe@gmail.com");	
+//		userService.addUser(seller1);
+//
+//		UserCreate seller2 = new UserCreate();
+//		seller1.setUserType(UserType.SELLER);
+//		seller1.setUsername("jojo");
+//		seller1.setPassword("bcdefghi");
+//		seller1.setPasswordConfirm("bcdefghi");
+//		seller1.setFirstName("Jonas");
+//		seller1.setLastName("Jonaitis");
+//		seller1.setPhoneNo("868686822");
+//		seller1.setEmail("jojo@gmail.com");	
+//		userService.addUser(seller2);
+
+
 		Author oliver = new Author("Jamie", "Oliver");
 		Set<Author> authors = new HashSet<Author>();
 		authors.add(oliver);
