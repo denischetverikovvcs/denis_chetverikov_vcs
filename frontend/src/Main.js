@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Login from './Login';
-import AdminMenu from './AdminMenu';
+//import AdminMenu from './AdminMenu';
 import AddBook from './AddBook';
 import AddAdmin from './AddAdmin';
 import AddSeller from './AddSeller';
@@ -10,7 +10,7 @@ import AddSeller from './AddSeller';
 import SignUp from './SignUp';
 
 import BookList from './BookList';
-import Users from './Users';
+import UserList from './UserList';
 
 
 
@@ -24,7 +24,7 @@ const Main = () => (
         <Route exact path='/adminmenu/addAdmin' component={AddAdmin}></Route>
         <Route exact path='/adminmenu/addSeller' component={AddSeller}></Route>
         <Route exact path='/adminmenu/allBooks/' component={BookList}></Route>
-        <Route exact path='/adminmenu/users' component={Users}></Route>
+        <Route exact path='/adminmenu/allUsers' component={UserList}></Route>
     </Switch>
   );
 
