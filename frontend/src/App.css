@@ -134,3 +134,36 @@ img {
   padding: 20px;
   text-align: left;
 }
+
+/* users list  */
+
+.users{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+table, th{
+  text-align: center;
+}
+
+.glyphicon{
+border: none;
+background-color: #fff;
+}
+
+.input td input{
+  border-style: none;
+}
+
+
+button.invisible {
+  display: none;
+}
+
+button.disabled {
+  color: gray;
+}
+
+.input td input.inEditMode {
+  border: 1px solid red;
+}

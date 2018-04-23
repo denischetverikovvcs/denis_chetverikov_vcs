@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import User from './User';
-import './UserList.css';
+import { Table } from 'react-bootstrap';
 
 class UserList extends Component {
     constructor(props) {
@@ -28,9 +28,8 @@ class UserList extends Component {
             })
 
         return (
-            <div>
-                <h1>Visi vartotojai</h1>
-                <table>
+            <div className="users">
+                <Table bordered condensed>
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -39,13 +38,13 @@ class UserList extends Component {
                             <th>Pavardė</th>
                             <th>Telefonas</th>
                             <th>El. paštas</th>
-                            <th colSpan="2">Veiksmai</th>
+                            <th colSpan="2">Redaguoti/Trinti</th>
                         </tr>
                     </thead>
                     <tbody>
                         {userList}
                     </tbody>
-                </table>
+                </Table>
             </div>
         )
     }

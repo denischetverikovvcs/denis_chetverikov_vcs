@@ -1,6 +1,6 @@
 #FileLock
-#Mon Apr 23 08:22:25 EEST 2018
-hostName=Win81
-id=162f0f3fe532df94e072b7e3d5978d738a23a116df8
+#Mon Apr 23 11:45:51 EEST 2018
+hostName=Ernesta-PC
+id=162f1ae2775d97f875eef463a53b5bf176820416f82
 method=file
-server=10.0.2.15\:62002
+server=192.168.56.1\:50090
