@@ -23,6 +23,7 @@ class User extends Component {
     }
     handleEdit = event => {
         this.setState({style : {readOnly: false, className: "inEditMode" }});
+        this.initialState = this.state;
     }
     addAdmin = event => {
         this.setState({style : {readOnly: true, className: "" }});
@@ -52,7 +53,8 @@ class User extends Component {
         axios
             .delete('http://localhost:8080/api/users/' + id)
             .then(console.log('ištryniau'))
-        this.setState({style : {display: false}})
+        this.setState({style : {display: false}, user:{username:""}})
+        console.log(this.state);
     }
 
     cancel = () => {
@@ -60,22 +62,8 @@ class User extends Component {
         console.log(this.state);
     }
     render() {
-        // if (this.state.mode === 'view') {     return (         <tr>
-        // <td>{this.props.user.id}</td>             <td
-        // contentEditable="{this.state.editMode}">{this.props.user.username}</td>
-        //       <td>{this.props.user.firstName}</td>
-        // <td>{this.props.user.lastName}</td>
-        // <td>{this.props.user.phoneNo}</td>
-        // <td>{this.props.user.email}</td>             
-        // <td className="button2">
-        //         <button onClick={this.handleEdit}>Taisyti</button>             </td>
-        //            <td className="button1">                 <button onClick={() =>
-        // this.deleteUser(this.props.user.id)}>                     Trinti
-        //    </button>             
-        //</td>         
-        //</tr>     ); // } else {
         return (
-            <tr>
+            <tr className = "input">
                 <td>
                     <input type="text" size="5" defaultValue={this.props.user.id}/>
                 </td>
@@ -83,7 +71,7 @@ class User extends Component {
                     <input
                         className={this.state.style.className}
                         type="text"
-                        size="20"
+                        size="15"
                         readOnly={this.state.style.readOnly}
                         defaultValue={this.state.user.username}
                         onChange={this.handleChangeFor("username").bind(this)}/>
@@ -91,58 +79,53 @@ class User extends Component {
                 <td><input
                     className={this.state.style.className}
                     type="text"
-                    size="20"
+                    size="15"
                     readOnly={this.state.style.readOnly}
                     defaultValue={this.state.user.firstName}
                     onChange={this.handleChangeFor("fname")}/></td>
                 <td><input
                     className={this.state.style.className}
                     type="text"
-                    size="20"
+                    size="15"
                     readOnly={this.state.style.readOnly}
                     defaultValue={this.state.user.lastName}
                     onChange={this.handleChangeFor("lname")}/></td>
                 <td><input
                     className={this.state.style.className}
                     type="text"
-                    size="20"
+                    size="15"
                     readOnly={this.state.style.readOnly}
                     defaultValue={this.state.user.phoneNo}
                     onChange={this.handleChangeFor("phone")}/></td>
                 <td><input
                     className={this.state.style.className}
                     type="text"
-                    size="20"
+                    size="15"
                     readOnly={this.state.style.readOnly}
                     defaultValue={this.state.user.email}
                     onChange={this.handleChangeFor("email")}/></td>
                 <td className="button2">
-                    <button
-                        className={this.state.style.readOnly ? "" : "invisible"} 
+                    <button 
+                        className={(this.state.style.readOnly ? "" : "invisible") + " glyphicon glyphicon-pencil"} 
                         onClick={this.handleEdit}>
-                        Taisyti
                     </button>
                     <button 
-                        className={this.state.style.readOnly ? "invisible":""} 
+                        className={(this.state.style.readOnly ? "invisible":"") + " glyphicon glyphicon-ok"} 
                         onClick={this.addAdmin}>
-                        Saugoti
                     </button>
                 </td>         
                 <td className="button1">
                     <button
-                        className={this.state.style.readOnly ? "" : "invisible"} 
+                        className={(this.state.style.readOnly ? "" : "invisible") + " glyphicon glyphicon-trash"} 
                         onClick={() => this.deleteUser(this.props.user.id)}>
-                        &nbsp;Trinti&nbsp;
                     </button>             
                     <button
-                        className={this.state.style.readOnly ? "invisible":""} 
+                        className={(this.state.style.readOnly ? "invisible":"") + " glyphicon glyphicon-remove"} 
                         onClick={() => this.cancel()}>
-                        Atšaukti
                     </button>             
                 </td>
             </tr>
         )
-        // }
     }
 }
 
