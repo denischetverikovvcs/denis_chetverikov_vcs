@@ -1,7 +1,11 @@
+.metadata/
+Servers/
+RemoteSystemsTempFiles/
+**/node_modules/
+
 Thumbs.db
 *.bat
 *.cmd
 *.code-workspace
 *.lnk
 *.vscode
-**/node_modules/
