@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.vtvpmc.threered.bookstore</groupId>
-	<artifactId>threered</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>lt.vtvpmc.threered</groupId>
+	<artifactId>bookstore</artifactId>
+	<version>0.0.3</version>
 	<packaging>jar</packaging>
 
-	<name>threered</name>
+	<name>bookstore</name>
 	<description>3RED bookstore study project</description>
 
 	<parent>
@@ -115,7 +115,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+                <!-- <version>3.2.0</version> -->
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>lt.vtvpmc.threered.bookstore.ThreeredApplication</mainClass>
+                        </manifest>
+                     </archive>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 
 
