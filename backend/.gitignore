@@ -25,3 +25,6 @@ nbdist/
 .nb-gradle/
 
 !mvnw.cmd
+
+db/
+*.db
