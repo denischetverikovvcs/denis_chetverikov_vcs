@@ -24,8 +24,7 @@ dist/
 nbdist/
 .nb-gradle/
 
-!*.bat
-!*.cmd
+!run.cmd
 
 db/
 *.db
